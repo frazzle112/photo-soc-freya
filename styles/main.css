@@ -1,0 +1,42 @@
+
+header {
+	text-align: center; 
+	color: white;
+	background: url('http://i.imgur.com/MDcKcxK.jpg?1');
+	background-size: cover;
+	margin: 
+}
+h1 {
+	font-size: 50px;
+	color: black;
+	font: raleway;
+}
+ ul {
+      padding: 10px;
+      background: rgba(0,0,0,0.5);
+	  color: white;
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+h1 {
+	color: white;
+	background: black;
+}
+article {
+      max-width: 500px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+	
+@media (max-width: 500px) {
+      h1 {
+          font-size: 15px;
+      }
+      li {
+        display: block;
+        padding: 5px;
+      }
+    }
+

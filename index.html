@@ -1,0 +1,195 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>University of St Andrews Photography Society</title>
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="simple_jquery_slideshow/js/jquery-1.2.6.min.js"></script>
+<script type="text/javascript">
+
+/*** 
+    Simple jQuery Slideshow Script
+    Released by Jon Raasch (jonraasch.com) under FreeBSD license: free to use or modify, not responsible for anything, etc.  Please link out to me if you like it :)
+***/
+
+function slideSwitch() {
+    var $active = $('#slideshow DIV.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow DIV:last');
+
+    // use this to pull the divs in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow DIV:first');
+
+    // uncomment below to pull the divs randomly
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 5000 );
+});
+
+</script>
+<style>
+
+body {
+	background: black;
+	color: white;
+	margin: 0 auto;
+	font-family: 'Raleway', sans-serif;
+	max-width: 600px;
+}
+
+header {
+	text-align: center
+	background: black;
+	color: white;
+}
+img {
+	height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 0px 50px 0 50px;
+  border-radius: 20px;
+}
+
+h1 {
+	color: white;
+	background: black;
+	font-size: 60px;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+}
+ul {
+	padding: 20px;
+} 
+
+li {
+      display: inline;
+	  font-size: 30px;
+      padding: 0px 50px 0px 30px;
+	  background: black;
+	  font-family: 'Raleway', sans-serif;
+	  color: white;
+	  margin: 0px 50px 0 
+    }
+#slideshow {
+    position:relative;
+    height:400px;
+}
+
+#slideshow DIV {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+    opacity:0.0;
+    height: 400px;
+    background-color: black;
+	margin-right: 150px;
+	
+}
+
+#slideshow DIV.active {
+    z-index:10;
+    opacity:1.0;
+}
+
+#slideshow DIV.last-active {
+    z-index:9;
+}
+
+#slideshow DIV IMG {
+    height: 350px;
+    display: block;
+    border: 0;
+    margin-bottom: 10px;
+	margin-right: 50px;
+}
+
+@media (max-width: 500px) {
+      h1 {
+          font-size: 36px;
+      }
+     li {
+        display: block;
+        padding: 5px;
+      }
+	  
+</style>
+</head>
+
+<body>
+	<header>
+			<h1> University of St Andrews Photography Society</h1>
+			<ul>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contactus.html">Contact</a></li>
+			</ul>
+			<div>
+			<img src='http://i.imgur.com/big4mGm.jpg'>
+			<div>	
+			<div>
+			<h2> Gallery</h2>
+			<p>Check out a snipet of our awesome photos:</p>
+			</div>
+			
+			<div id="slideshow">
+    <div class="active">
+        <a href="www.betterhostreview.com/download-free-simple-jquery-slideshow.html"><img src="http://i.imgur.com/O1LMQsJ.jpg" alt="Slideshow Image 1" /></a>
+    </div>
+    
+    <div>
+        <a href="http://www.betterhostreview.com/divi-wordpress-theme.html"><img src="http://i.imgur.com/HFvAObN.jpg" alt="Slideshow Image 2" /></a>
+    </div>
+    <div>
+        <a href="http://www.betterhostreview.com/divi-wordpress-theme.html"><img src="http://i.imgur.com/6YL3OS3.jpg" alt="Slideshow Image 3" /></a>
+    </div>
+    <div>
+        <a href="http://www.betterhostreview.com/divi-wordpress-theme.html"><img src="http://i.imgur.com/XfxDoLz.jpg" alt="Slideshow Image 4" /></a>
+    </div>
+    <div>
+        <a href="http://www.betterhostreview.com/divi-wordpress-theme.html"><img src="http://i.imgur.com/IasPfEy.jpg"alt="Slideshow Image 5" /></a>
+    </div>
+	<div>
+        <a href="http://www.betterhostreview.com/divi-wordpress-theme.html"><img src="http://i.imgur.com/rjMIFYX.jpg"alt="Slideshow Image 6" /></a>
+    </div>	
+	<div>
+        <a href="http://www.betterhostreview.com/divi-wordpress-theme.html"><img src="http://i.imgur.com/0SD4bz5.jpg"alt="Slideshow Image 7" /></a>
+    </div>	
+	<div>
+        <a href="http://www.betterhostreview.com/divi-wordpress-theme.html"><img src="http://i.imgur.com/ofuag9J.jpg"alt="Slideshow Image 8" /></a>
+    </div>
+	<div>
+        <a href="http://www.betterhostreview.com/divi-wordpress-theme.html"><img src="http://i.imgur.com/3VSiex0.jpg"alt="Slideshow Image 9" /></a>
+    </div>
+	<div>
+        <a href="http://www.betterhostreview.com/divi-wordpress-theme.html"><img src="http://i.imgur.com/Xfxbbvt.jpg"alt="Slideshow Image 10" /></a>
+    </div>
+	<div>
+        <a href="http://www.betterhostreview.com/divi-wordpress-theme.html"><img src="http://i.imgur.com/Ev36Xvk.jpg"alt="Slideshow Image 11" /></a>
+    </div>
+	<div>
+        <a href="http://www.betterhostreview.com/divi-wordpress-theme.html"><img src="http://i.imgur.com/PuiUjPR.jpg"alt="Slideshow Image 12" /></a>
+    </div>
+	<div>
+        <a href="http://www.betterhostreview.com/divi-wordpress-theme.html"><img src="http://i.imgur.com/2zpQYeR.jpg"alt="Slideshow Image 13" /></a>
+    </div>
+	</header>
+	
+
+</div>
+		</article>
+</body>
+
+</html>

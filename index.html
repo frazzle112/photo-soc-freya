@@ -17,8 +17,7 @@ function slideSwitch() {
     if ( $active.length == 0 ) $active = $('#slideshow DIV:last');
 
     // use this to pull the divs in the order they appear in the markup
-    var $next =  $active.next().length ? $active.next()
-        : $('#slideshow DIV:first');
+    var $next =  $active.next().length ? $active.next() : $('#slideshow DIV:first');
 
     // uncomment below to pull the divs randomly
     // var $sibs  = $active.siblings();
@@ -83,6 +82,11 @@ li {
 	  color: white;
 	  margin: 0px 50px 0 
     }
+	
+a {
+	color: white;
+	text-decoration: none;
+}
 #slideshow {
     position:relative;
     height:400px;
@@ -107,6 +111,7 @@ li {
 
 #slideshow DIV.last-active {
     z-index:9;
+	opacity:0;
 }
 
 #slideshow DIV IMG {
@@ -134,7 +139,7 @@ li {
 			<h1> University of St Andrews Photography Society</h1>
 			<ul>
 				<li><a href="http://jchat1221.github.io/photosoc/">About</a></li>
-				<li><a href="contactus.html">Contact</a></li>
+				<li><a href="http://kllange3.github.io/contact-us/">Contact</a></li>
 			</ul>
 			<div>
 			<img src='http://i.imgur.com/big4mGm.jpg'>

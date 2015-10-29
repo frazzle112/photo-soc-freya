@@ -17,8 +17,7 @@ function slideSwitch() {
     if ( $active.length == 0 ) $active = $('#slideshow DIV:last');
 
     // use this to pull the divs in the order they appear in the markup
-    var $next =  $active.next().length ? $active.next()
-        : $('#slideshow DIV:first');
+    var $next =  $active.next().length ? $active.next() : $('#slideshow DIV:first');
 
     // uncomment below to pull the divs randomly
     // var $sibs  = $active.siblings();
@@ -31,7 +30,7 @@ function slideSwitch() {
     $next.css({opacity: 0.0})
         .addClass('active')
         .animate({opacity: 1.0}, 1000, function() {
-            $active.removeClass('active last-active');
+            $active.removeClass('active');
         });
 }
 
@@ -83,6 +82,11 @@ li {
 	  color: white;
 	  margin: 0px 50px 0 
     }
+	
+a {
+	color: white;
+	text-decoration: none;
+}
 #slideshow {
     position:relative;
     height:400px;
@@ -107,6 +111,7 @@ li {
 
 #slideshow DIV.last-active {
     z-index:9;
+	opacity:0;
 }
 
 #slideshow DIV IMG {
